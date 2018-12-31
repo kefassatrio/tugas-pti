@@ -1,0 +1,14 @@
+{% extends 'base_layout.html' %}
+
+
+{% block content %}
+    <h1 class="friends"> Friends List </h1>
+    <div class="friends">
+        {% for friend in friends %}
+            <div class='friend'>
+                <h2><a href="{% url 'friends_details:details' slug=friend.slug %}"> {{ friend.name }} </a></h2>
+                <p>Description: {{ friend.snippet }}</p>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

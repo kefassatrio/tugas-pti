@@ -1,0 +1,12 @@
+{% extends 'base_layout.html' %}
+
+{% block content%}
+    <div class="create-comment">
+        <h2>Write Your Comment Here!</h2>
+        <form class="site-form" action="{% url 'friends:comment' slug=friend.slug %}" method="POST">
+            {% csrf_token %}
+            {{ form.text }}
+            <input type="submit" value="Create">
+        </form>
+    </div>
+{% endblock %}

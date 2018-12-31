@@ -1,0 +1,161 @@
+body{
+    background-color: #111111;
+}
+.wrapper{
+    max-width: 960px;
+    margin: 0 auto;
+    font-size: 1em;
+    font-family: "Muli";
+    color: white;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2em;
+}
+button{
+    background: none;
+    color: white;
+    border: 0;
+    cursor: pointer;
+    font-size: 1.2em;
+    font-family: "Muli";
+}
+.button{
+    padding: 10px;
+    border: 1px solid #3fb6b2;
+    border-radius: 10px;
+
+}
+.comment{
+    padding-top:30px;
+    margin-top:30px;
+}
+
+.username{
+    position: relative;
+    top:15px;
+    z-index:1000;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #3fb6b2;
+}
+.commenttext{
+    word-wrap: break-word;
+    position: relative;
+    left:10px;
+    padding: 10px;
+    color: black;
+    background-color: white;
+}
+.time{
+
+    float: right;
+    position:relative;
+    top: -35px;
+    color:
+}
+.details h3{
+    padding-top:30px;
+}
+.site-form{
+    color: white;
+}
+.create-friends{
+    color:white;
+}
+.friends{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 30px;
+}
+.friend{
+    padding: 10px;
+    position: relative;
+    padding-bottom: 40px;
+    border-radius: 10px;
+    background-color: #3fb6b2;
+}
+.friends-details .details h2{
+    text-align: center;
+    margin: 20px auto;
+    font-size:2em;
+}
+.friends-details .details p{
+    text-align:left;
+    font-size: 1.2em;
+}
+.friend h2{
+    font-size: 1.2em;
+}
+
+div.wrapper h1{
+    text-align: center;
+    margin: 100px auto;
+    font-size: 2.4em;
+}
+.details{
+    word-wrap: break-word;
+}
+header{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 20px 0;
+}
+
+.nav-style{
+    text-align: center;
+    background-color: #3fb6b2;
+    padding: 10px;
+    border-radius: 10px;
+}
+div.wrapper .nav-style li{
+    display: inline-block;
+    margin-left:20px;
+}
+
+.site-form{
+    color: #3fb6b2;
+    padding: 10px;
+    border: 1px solid #3fb6b2;
+    border-radius: 10px;
+}
+
+.site-form input, .textarea{
+    margin: 20px;
+    padding: 10px;
+    display: block;
+}
+
+.helptext, .helptext ul{
+    margin: 0 auto 20px;
+    color: white;
+    font-size: 0.9em;
+    display: block;
+}
+
+.errorlist li{
+    padding:10px;
+    list-style:none;
+    border: 1px solid red;
+    color: red;
+}
+.contactList{
+    display: inline;
+}
+.contactList .desc{
+    margin-bottom: 20px;
+}
+.contactList li{
+    list-style: none;
+}
+.site-form input[type="submit"]{
+    background: #3fb6b2;
+    border:0;
+    color: white;
+    font-size: 1.2em;
+    border-radius: 4px;
+    margin: 10px 0;
+    cursor: pointer;
+}

@@ -1,0 +1,19 @@
+{% extends 'base_layout.html' %}
+
+{% block content %}
+    <div class="create-friends">
+        <h2>Add a new friend</h2>
+        <form class="site-form" action="{% url 'friends:create' %}" method="post">
+            {% csrf_token %}
+            <ul class="contactList">
+                <li>Name: {{ form.name }}</li>
+                <li>Slug: {{ form.slug }}</li>
+                <li>Place and Date of Birth: {{ form.tempat_tanggal_lahir }}</li>
+                <li class= "desc">Description: <br><br>{{ form.description }}</li>
+                <li>Line ID: {{ form.line }}</li>
+            </ul>
+            <input type="submit" value="Create">
+        </form>
+    </div>
+
+{% endblock %}

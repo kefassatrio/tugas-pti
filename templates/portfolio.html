@@ -1,0 +1,154 @@
+{% load static from staticfiles %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Cephas Knight</title>
+        <link href="{% static 'portfolio/Main.css' %}" rel="stylesheet">
+
+    </head>
+
+    <body>
+        <!-- header start -->
+        <div id="header" class="section">
+            <p>Kefas Satrio Bangkit Solideantyo</p>
+            <img alt="Cool shit" class="img-circle" src="{% static 'portfolio/images/kefas.jpg' %}" style="height:20%;width:20%;margin-top:60px;margin-bottom:85px">
+        </div>
+        <!-- header end -->
+        <div class="nav-style">
+            <nav>
+                <ul>
+                    <li><a href="http://localhost:8000">My Profile</a></li>
+                    <li><a href="http://localhost:8000/friends/">Friends</a></li>
+                    {% if user.is_authenticated %}
+                    <li><a href="{% url 'friends:create' %}" class="highlight">Add Friend</a></li>
+                    <li>
+                        <form class="logout-link" action="{% url 'accounts:logout' %}" method="post">
+                            {% csrf_token %}
+                            <button type="submit">Logout</button>
+                        </form>
+                    </li>
+                    {% else %}
+                    <li><a href="{% url 'accounts:login' %}">Login</a></li>
+                    <li><a href="{% url 'accounts:signup' %}">Signup</a></li>
+                    {% endif %}
+                </ul>
+            </nav>
+        </div>
+
+        <!-- About Me section start -->
+        <div class="section">
+            <h1><span>About Me</span></h1>
+            <p>
+                Hey! I'm <strong>Kefas</strong>. I've never really learned HTML and CSS properly, since I've been too busy studying DDP1 and Discrete Mathematics. This is my first time using coding with HTML and CSS. By <i>coding</i> I mean <b>copy-pasting</b>  <i>"some"</i>codes from <a href="http://www.sololearn.com"> <ins>SoloLearn</ins> </a>.
+                <br>
+                So....
+                <br>
+                Yeah...
+                <br>
+                I don't really understand what <strong>ALL</strong> of these codes do, but I do understand <i>some</i> parts of them.
+                <br>
+                Like, I understand the basics on how to add and edit the text and images, so at least I get to learn a little, <i>even though I copy-pasted</i>.
+                <br>
+                OH... and thanks to Kak Jojo (my SBF PTI Teacher) and <a href="https://www.youtube.com/channel/UCW5YeuERMmlnqo4oq8vwUpg">The Net Ninja</a>, I managed to learn a bit about Django.
+            </p>
+            <p class="quote">"I love anime" - Elon Musk</p>
+        </div>
+        <!-- About Me section end -->
+
+        <!-- My Schedule section start -->
+        <div class="section">
+            <h1><span>My Achievements</span></h1>
+            <ul>
+                <li><b><i>Cooked a 3-minute instant cup noodles in under 2 minutes</i></b></li>
+                <p class="popmie"><img src ="http://assets.klikindomaret.com/products/10000975/10000975_1.jpg" style="width:30%;heigt:30%;"></p>
+                <li><b><i>Beauty Make Up contest (1st place winner)</i></b></li>
+                <p class="makeup"><img src="{% static 'portfolio/images/before after.jpg' %}" style="width:80%;height:80%;"></p>
+                <li><b><i>Bergulat dengan Godzilla</i></b></li>
+                <p class="godzilla"><img src="{% static 'portfolio/images/zilla vs epas.jpg' %}" style="width:80%;height:80%;"></p>
+
+            </ul>
+
+
+        </div>
+        <!-- My Schedule section end -->
+
+
+        <!-- My Skills section start -->
+        <div class="section">
+            <h1><span>My Skills</span></h1>
+            <ul>
+                </li>
+                <li>Microsoft Office <br>
+                    <progress min="0" max="100" value="75"></progress>
+                </li>
+                <li>Photoshop <br />
+                    <progress min = "0" max="100" value="55"></progress>
+                </li>
+                <li>Python <br />
+                    <progress min="0" max="100" value="40"></progress>
+                </li>
+                <li>HTML <br />
+                    <progress min="0" max="100" value="10"></progress>
+                </li>
+                <li>Copy-pasting skills<br>
+                    <progress min="0" max="100" value="100"></progress>
+
+            </ul>
+        </div>
+        <!-- My Skills section end -->
+        <!-- FAQ -->
+        <div class="section">
+            <h1><span>F.A.Q</span></h1>
+            <ul>
+                <li>Kefas, Kefas apa yang bikin adem?<br>
+                     <img src="https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium//93/MTA-1643457/cosmos_cosmos-16sdb-stand-fan--16-inch-_full02.jpg" style="height:45%; width:45%;">
+                    <p><i>Kefas angin</i></p>
+                </li>
+                <br>
+                <li>Kefas, Kefas apa yang lembut?<br>
+                    <img src= "https://img.okeinfo.net/content/2015/04/13/194/1133181/intip-manfaat-bola-kapas-bagi-kecantikan-yIPtVeEtHS.jpg" style="height: 40%; weight: 40%;">
+                    <p> <i>Kepas</i> </p>
+                </li>
+
+            </ul>
+        </div>
+
+         <!-- Media section start -->
+        <div class="section">
+            <h1><span>My Sponsors</span></h1>
+            <h4 align="center"> Nutrisari </h4>
+            <iframe height="350px" width="60%"align="center" src="https://www.youtube.com/embed/c1HhkGcC0OA" allowfullscreen></iframe>
+            <h4 align="center"> Mecin </h4>
+            <iframe height="350px" width="60%"align="center" src="https://www.youtube.com/embed/At2_qCUZrCw" allowfullscreen></iframe>
+            <h4 align="center"> Tolak Angin </h4>
+            <iframe height="350px" width="60%"align="center" src="https://www.youtube.com/embed/PEO7nq20VZw" allowfullscreen></iframe>
+
+
+        </div>
+        <!-- Media section end -->
+
+
+        <!-- Contacts section start -->
+        <div class="section" id="contacts">
+            <h1><span>Follow Me!</span></h1>
+            <div>
+                <a href="https://www.facebook.com/profile.php?id=100010642963869" target="_blank">
+                    <img style="height:5%; width:5%;" alt="Facebook" src="https://en.facebookbrand.com/wp-content/uploads/2016/05/flogo_rgb_hex-brc-site-250.png" />
+                </a>
+                <a href="https://www.instagram.com/kefas_satrio/?hl=en" target = "_blank">
+                    <img style="height:7%; width:7%;" alt="Instagram" src="https://www.brandchannel.com/wp-content/uploads/2016/05/instagram-new-logo-may-2016.jpg"/>
+                </a>
+                <a href="https://twitter.com/kefas_satrio" target = "_blank">
+                    <img style="height:6%; width:6%;" alt="Twitter" src="https://www.sololearn.com/Uploads/icons/twitter.png" />
+                </a>
+            </div>
+        </div>
+        <!-- Contacts section end -->
+
+        <div class="section" >
+            <p align="center"><img style="height:70%; width:70%;" alt="Thank You" src="{% static 'portfolio/images/thank you.jpg' %}" /></p>
+        </div>
+
+    </body>
+</html>
