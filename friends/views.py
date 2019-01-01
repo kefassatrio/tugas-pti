@@ -13,7 +13,8 @@ def friends_details(request, slug):
     #return HttpResponse(slug)
     details = Friends.objects.get(slug=slug)
     comments = Comment.objects.filter(friend=details).order_by('created')
-    return render(request, 'friends/friends_details.html', {'details': details,'comments':comments})
+    number_comments = str(Comment.objects.filter(friend=details).count())
+    return render(request, 'friends/friends_details.html', {'details': details,'comments':comments, 'number_comments': number_comments})
 
 
 @login_required(login_url='/accounts/login/')

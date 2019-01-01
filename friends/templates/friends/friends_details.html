@@ -13,6 +13,7 @@
         <h2 class="commenttitle">Comments:</h2>
         <a class="button" href="{% url 'friends:comment' slug=details.slug %}">Add a Comment</a>
         <br>
+        <h3 class="count">Total Comments: {{ number_comments }} </h3>
         {% for comment in comments %}
             <div class="comment">
                 <strong class="username">{{ comment.username }}</strong>
